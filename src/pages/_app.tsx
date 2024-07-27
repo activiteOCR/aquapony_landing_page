@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GridItem area={"main"} bg="white" p="2">
           <Component {...pageProps} />
         </GridItem>
-        <GridItem area={"footer"} bg="black" p="2">
+        <GridItem area={"footer"} bg="black" p="1">
           <Footer />
         </GridItem>
       </Grid>

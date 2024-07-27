@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <Box bg="black" color="white" py={4} textAlign="center">
-      <Text>&copy; 2024 My Landing Page. All rights reserved.</Text>
+    <Box bg="black" color="white" py={0} textAlign="center">
+      <Text>&copy; 2024 Aquapony ton. All rights reserved.</Text>
     </Box>
   );
 };
