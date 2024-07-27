@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         "nav main"
                         "footer footer"`}
         gridTemplateRows={"50px 1fr 30px"}
-        gridTemplateColumns={"150px 1fr"}
+        gridTemplateColumns={"60px 1fr"}
         h="100vh"
         gap="1"
         color="blackAlpha.700"
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Navbar />
         </GridItem>
         <GridItem area={"nav"} bg="brand.400" p="2">
-          Holder
+          Hodl
         </GridItem>
         <GridItem area={"main"} bg="white" p="2">
           <Component {...pageProps} />
