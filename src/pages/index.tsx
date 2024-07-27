@@ -25,8 +25,8 @@ const Home: React.FC = () => {
 
       <AspectRatio maxW="400px" ratio={4 / 3} mx="auto">
         <Image
-          src="https://bit.ly/naruto-sage"
-          alt="naruto"
+          src="https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/main/src/images/Aquapony_chapter1.webp"
+          alt="Aquapony chapter 1"
           objectFit="cover"
         />
       </AspectRatio>

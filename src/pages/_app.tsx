@@ -18,11 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         color="blackAlpha.700"
         fontWeight="bold"
       >
-        <GridItem area={"header"} bg="brand.400" color="white">
+        <GridItem area={"header"} bg="black" color="white">
           <Navbar />
         </GridItem>
-        <GridItem area={"nav"} bg="black" p="2">
-          Nav
+        <GridItem area={"nav"} bg="brand.400" p="2">
+          Holder
         </GridItem>
         <GridItem area={"main"} bg="white" p="2">
           <Component {...pageProps} />
