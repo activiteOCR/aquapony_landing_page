@@ -89,7 +89,7 @@ export default function HeroSection() {
                     top={"10px"}
                   />
                   <Text
-                    fontSize={"lg"}
+                    fontSize={"x-large"}
                     fontFamily={"Caveat"}
                     position={"absolute"}
                     right={"-125px"}
