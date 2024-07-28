@@ -305,16 +305,19 @@ export default function Navbar() {
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
-        <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "start", md: "start" }}
+          maxW={"4%"}
+        >
           <Link
             href="https://aquapony-landing-page.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="https://example.com/logo.svg" // Replace with your SVG URL
+              src="https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/974ff4fe7929e3131824ca640e8df60325058af9/src/images/aquapony-sunglasses.svg" // Replace with your SVG URL
               alt="Logo"
-              height="40px"
             />
           </Link>
         </Flex>
@@ -381,8 +384,8 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
+                fontSize={"xl"}
+                fontWeight={400}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
@@ -541,8 +544,8 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Price Chart",
-    href: "https://example.com/price-chart", // External URL for Price Chart
+    label: "Dedust Price Chart (soon)",
+    href: "https://t.me/aquapony_channel", // External URL for Price Chart
   },
   {
     label: "Telegram",
