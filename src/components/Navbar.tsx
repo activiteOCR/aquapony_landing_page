@@ -1,7 +1,7 @@
 // import {
 //   Box,
 //   Flex,
-//   Text,
+//   Text as ChakraText,
 //   IconButton,
 //   Button,
 //   Stack,
@@ -31,28 +31,29 @@
 //         bg="black"
 //         color="white"
 //         minH={"60px"}
-//         py={{ base: 2 }}
-//         px={{ base: 4 }}
+//         py={{ base: 2, md: 4 }}
+//         px={{ base: 4, md: 8 }}
 //         borderBottom={1}
 //         borderStyle={"solid"}
 //         borderColor={useColorModeValue("gray.200", "gray.900")}
 //         align={"center"}
+//         justify={"space-between"}
 //       >
-//         <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
-//           <Text
-//             textAlign={useBreakpointValue({ base: "center", md: "left" })}
-//             fontFamily={"heading"}
-//             color="white"
+//         <Flex justify={{ base: "start", md: "start" }}>
+//           <Link
+//             href="https://aquapony-landing-page.vercel.app/"
+//             target="_blank"
+//             rel="noopener noreferrer"
 //           >
-//             Logo
-//           </Text>
+//             <img
+//               src="https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/974ff4fe7929e3131824ca640e8df60325058af9/src/images/aquapony-sunglasses.svg" // Replace with your SVG URL
+//               alt="Logo"
+//               style={{ maxHeight: "40px" }}
+//             />
+//           </Link>
 //         </Flex>
 
-//         <Flex
-//           flex={{ base: 1, md: "auto" }}
-//           ml={{ base: -2 }}
-//           display={{ base: "flex", md: "none" }}
-//         >
+//         <Flex display={{ base: "flex", md: "none" }}>
 //           <IconButton
 //             onClick={onToggle}
 //             icon={
@@ -63,28 +64,29 @@
 //           />
 //         </Flex>
 
-//         <Flex
-//           flex={{ base: 1 }}
-//           justify={{ base: "end", md: "end" }}
+//         <Stack
+//           direction={"row"}
+//           spacing={4}
 //           align={"center"}
+//           display={{ base: "none", md: "flex" }}
 //         >
-//           <Stack direction={"row"} spacing={4} align={"center"}>
-//             <DesktopNav />
-//             <Button
-//               as={"a"}
-//               fontSize={"sm"}
-//               fontWeight={600}
-//               color={"white"}
-//               bg={"pink.400"}
-//               href={"#"}
-//               _hover={{
-//                 bg: "pink.300",
-//               }}
-//             >
-//               Buy $gasAQA
-//             </Button>
-//           </Stack>
-//         </Flex>
+//           <DesktopNav />
+//           <Button
+//             as={"a"}
+//             fontSize={"sm"}
+//             fontWeight={600}
+//             color={"white"}
+//             bg={"pink.400"}
+//             href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NTM3NTIxMzEyOSwidG9rZW5fYWRkcmVzcyI6IkVRQko4R0tJZV9wQy1wRjBpcUVhRldRQ1N4MzBFczZheXF4LXNpSmZEc3JXcjBxcyJ9" // External URL for the button
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             _hover={{
+//               bg: "pink.300",
+//             }}
+//           >
+//             Buy $GASAQA
+//           </Button>
+//         </Stack>
 //       </Flex>
 
 //       <Collapse in={isOpen} animateOpacity>
@@ -108,13 +110,15 @@
 //               <Link
 //                 p={2}
 //                 href={navItem.href ?? "#"}
-//                 fontSize={"sm"}
+//                 fontSize={"lg"}
 //                 fontWeight={500}
 //                 color={linkColor}
 //                 _hover={{
 //                   textDecoration: "none",
 //                   color: linkHoverColor,
 //                 }}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
 //               >
 //                 {navItem.label}
 //               </Link>
@@ -152,17 +156,19 @@
 //       p={2}
 //       rounded={"md"}
 //       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+//       target="_blank"
+//       rel="noopener noreferrer"
 //     >
 //       <Stack direction={"row"} align={"center"}>
 //         <Box>
-//           <Text
+//           <ChakraText
 //             transition={"all .3s ease"}
 //             _groupHover={{ color: "pink.400" }}
 //             fontWeight={500}
 //           >
 //             {label}
-//           </Text>
-//           <Text fontSize={"sm"}>{subLabel}</Text>
+//           </ChakraText>
+//           <ChakraText fontSize={"sm"}>{subLabel}</ChakraText>
 //         </Box>
 //         <Flex
 //           transition={"all .3s ease"}
@@ -208,13 +214,15 @@
 //         _hover={{
 //           textDecoration: "none",
 //         }}
+//         target="_blank"
+//         rel="noopener noreferrer"
 //       >
-//         <Text
+//         <ChakraText
 //           fontWeight={600}
 //           color={useColorModeValue("gray.600", "gray.200")}
 //         >
 //           {label}
-//         </Text>
+//         </ChakraText>
 //         {children && (
 //           <Icon
 //             as={ChevronDownIcon}
@@ -237,7 +245,13 @@
 //         >
 //           {children &&
 //             children.map((child) => (
-//               <Link key={child.label} py={2} href={child.href}>
+//               <Link
+//                 key={child.label}
+//                 py={2}
+//                 href={child.href}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
 //                 {child.label}
 //               </Link>
 //             ))}
@@ -256,12 +270,12 @@
 
 // const NAV_ITEMS: Array<NavItem> = [
 //   {
-//     label: "Price Chart",
-//     href: "#",
+//     label: "Dedust Price Chart (soon)",
+//     href: "https://t.me/aquapony_channel", // External URL for Price Chart
 //   },
 //   {
 //     label: "Telegram",
-//     href: "#",
+//     href: "https://t.me/aquapony_chat", // External URL for Telegram
 //   },
 // ];
 
@@ -298,35 +312,29 @@ export default function Navbar() {
         bg="black"
         color="white"
         minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={{ base: 2, md: 4 }}
+        px={{ base: 4, md: 8 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
+        justify={"space-between"}
       >
-        <Flex
-          flex={{ base: 1 }}
-          justify={{ base: "start", md: "start" }}
-          maxW={"4%"}
-        >
+        <Flex justify={{ base: "start", md: "start" }}>
           <Link
             href="https://aquapony-landing-page.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src="https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/974ff4fe7929e3131824ca640e8df60325058af9/src/images/aquapony-sunglasses.svg" // Replace with your SVG URL
+              src="https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/974ff4fe7929e3131824ca640e8df60325058af9/src/images/aquapony-sunglasses.svg"
               alt="Logo"
+              style={{ maxHeight: "40px" }}
             />
           </Link>
         </Flex>
 
-        <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
-        >
+        <Flex display={{ base: "flex", md: "none" }}>
           <IconButton
             onClick={onToggle}
             icon={
@@ -337,30 +345,29 @@ export default function Navbar() {
           />
         </Flex>
 
-        <Flex
-          flex={{ base: 1 }}
-          justify={{ base: "end", md: "end" }}
+        <Stack
+          direction={"row"}
+          spacing={4}
           align={"center"}
+          display={{ base: "none", md: "flex" }}
         >
-          <Stack direction={"row"} spacing={4} align={"center"}>
-            <DesktopNav />
-            <Button
-              as={"a"}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"white"}
-              bg={"pink.400"}
-              href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NTM3NTIxMzEyOSwidG9rZW5fYWRkcmVzcyI6IkVRQko4R0tJZV9wQy1wRjBpcUVhRldRQ1N4MzBFczZheXF4LXNpSmZEc3JXcjBxcyJ9" // External URL for the button
-              target="_blank"
-              rel="noopener noreferrer"
-              _hover={{
-                bg: "pink.300",
-              }}
-            >
-              Buy $GASAQA
-            </Button>
-          </Stack>
-        </Flex>
+          <DesktopNav />
+          <Button
+            as={"a"}
+            fontSize={"sm"}
+            fontWeight={600}
+            color={"white"}
+            bg={"pink.400"}
+            href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NTM3NTIxMzEyOSwidG9rZW5fYWRkcmVzcyI6IkVRQko4R0tJZV9wQy1wRjBpcUVhRldRQ1N4MzBFczZheXF4LXNpSmZEc3JXcjBxcyJ9"
+            target="_blank"
+            rel="noopener noreferrer"
+            _hover={{
+              bg: "pink.300",
+            }}
+          >
+            Buy $GASAQA
+          </Button>
+        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -384,8 +391,8 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? "#"}
-                fontSize={"xl"}
-                fontWeight={400}
+                fontSize={"lg"}
+                fontWeight={500}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
@@ -545,10 +552,10 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Dedust Price Chart (soon)",
-    href: "https://t.me/aquapony_channel", // External URL for Price Chart
+    href: "https://t.me/aquapony_channel",
   },
   {
     label: "Telegram",
-    href: "https://t.me/aquapony_chat", // External URL for Telegram
+    href: "https://t.me/aquapony_chat",
   },
 ];
