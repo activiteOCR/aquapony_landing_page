@@ -128,7 +128,7 @@ export default function HeroSection() {
         />
       </Head>
 
-      <Container maxW={"6xl"} py={{ base: 20, md: 36 }}>
+      <Container maxW={"5xl"} py={{ base: 20, md: 26 }}>
         <Flex direction={{ base: "column", md: "row" }} align="center">
           <Box flex={1} textAlign={"center"} p={5}>
             <Stack spacing={{ base: 8, md: 14 }}>
@@ -193,11 +193,11 @@ export default function HeroSection() {
           </Box>
           <Box
             flex={1}
-            bgImage="url('https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/main/src/images/Aquapony_chapter1.webp')"
+            bgImage="url('https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/main/src/images/a-human-mascot-disguised-as-a-white-unicorn-with-a.png')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgSize="cover"
-            height={{ base: "200px", md: "400px" }}
+            height={{ base: "200px", md: "600px" }}
             opacity={0.9}
           />
         </Flex>
