@@ -138,8 +138,12 @@ export default function HeroSection() {
                 lineHeight={"110%"}
               >
                 Aquapony($AQA) <br />
+                <Text as={"span"} color={"pink.300"}>
+                  The DeGen MemeCoin
+                </Text>{" "}
+                <br />
                 <Text as={"span"} color={"blue.400"}>
-                  The DeGen Meme Coin on TON
+                  on TON
                 </Text>
               </Heading>
               <Text color={"white"}>
@@ -160,10 +164,10 @@ export default function HeroSection() {
                   rounded={"full"}
                   px={6}
                   _hover={{
-                    bg: "green.500",
+                    bg: "blue.400",
                   }}
                 >
-                  Buy $AQA
+                  Buy $gasAQA
                 </Button>
                 <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
                   Learn more
@@ -193,7 +197,7 @@ export default function HeroSection() {
           </Box>
           <Box
             flex={1}
-            bgImage="url('https://raw.githubusercontent.com/activiteOCR/aquapony_landing_page/main/src/images/a-human-mascot-disguised-as-a-white-unicorn-with-a.png')"
+            bgImage="url('https://github.com/activiteOCR/aquapony_landing_page/blob/main/src/images/a-human-mascot-disguised-as-a-white-unicorn-with-a.png?raw=true')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgSize="cover"

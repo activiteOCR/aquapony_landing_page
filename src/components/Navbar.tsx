@@ -28,8 +28,8 @@
 //   return (
 //     <Box>
 //       <Flex
-//         bg={useColorModeValue("white", "gray.800")}
-//         color={useColorModeValue("gray.600", "white")}
+//         bg="black"
+//         color="white"
 //         minH={"60px"}
 //         py={{ base: 2 }}
 //         px={{ base: 4 }}
@@ -38,6 +38,16 @@
 //         borderColor={useColorModeValue("gray.200", "gray.900")}
 //         align={"center"}
 //       >
+//         <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
+//           <Text
+//             textAlign={useBreakpointValue({ base: "center", md: "left" })}
+//             fontFamily={"heading"}
+//             color="white"
+//           >
+//             Logo
+//           </Text>
+//         </Flex>
+
 //         <Flex
 //           flex={{ base: 1, md: "auto" }}
 //           ml={{ base: -2 }}
@@ -52,50 +62,29 @@
 //             aria-label={"Toggle Navigation"}
 //           />
 //         </Flex>
-//         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-//           <Text
-//             textAlign={useBreakpointValue({ base: "center", md: "left" })}
-//             fontFamily={"heading"}
-//             color={useColorModeValue("gray.800", "white")}
-//           >
-//             Logo
-//           </Text>
 
-//           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-//             <DesktopNav />
-//           </Flex>
-//         </Flex>
-
-//         <Stack
-//           flex={{ base: 1, md: 0 }}
-//           justify={"flex-end"}
-//           direction={"row"}
-//           spacing={6}
+//         <Flex
+//           flex={{ base: 1 }}
+//           justify={{ base: "end", md: "end" }}
+//           align={"center"}
 //         >
-//           <Button
-//             as={"a"}
-//             fontSize={"sm"}
-//             fontWeight={400}
-//             variant={"link"}
-//             href={"#"}
-//           >
-//             Sign In
-//           </Button>
-//           <Button
-//             as={"a"}
-//             display={{ base: "none", md: "inline-flex" }}
-//             fontSize={"sm"}
-//             fontWeight={600}
-//             color={"white"}
-//             bg={"pink.400"}
-//             href={"#"}
-//             _hover={{
-//               bg: "pink.300",
-//             }}
-//           >
-//             Sign Up
-//           </Button>
-//         </Stack>
+//           <Stack direction={"row"} spacing={4} align={"center"}>
+//             <DesktopNav />
+//             <Button
+//               as={"a"}
+//               fontSize={"sm"}
+//               fontWeight={600}
+//               color={"white"}
+//               bg={"pink.400"}
+//               href={"#"}
+//               _hover={{
+//                 bg: "pink.300",
+//               }}
+//             >
+//               Buy $gasAQA
+//             </Button>
+//           </Stack>
+//         </Flex>
 //       </Flex>
 
 //       <Collapse in={isOpen} animateOpacity>
@@ -106,8 +95,8 @@
 // }
 
 // const DesktopNav = () => {
-//   const linkColor = useColorModeValue("gray.600", "gray.200");
-//   const linkHoverColor = useColorModeValue("gray.800", "white");
+//   const linkColor = "white";
+//   const linkHoverColor = useColorModeValue("gray.200", "white");
 //   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
 //   return (
@@ -267,41 +256,11 @@
 
 // const NAV_ITEMS: Array<NavItem> = [
 //   {
-//     label: "Inspiration",
-//     children: [
-//       {
-//         label: "Explore Design Work",
-//         subLabel: "Trending Design to inspire you",
-//         href: "#",
-//       },
-//       {
-//         label: "New & Noteworthy",
-//         subLabel: "Up-and-coming Designers",
-//         href: "#",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Find Work",
-//     children: [
-//       {
-//         label: "Job Board",
-//         subLabel: "Find your dream design job",
-//         href: "#",
-//       },
-//       {
-//         label: "Freelance Projects",
-//         subLabel: "An exclusive list for contract work",
-//         href: "#",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Learn Design",
+//     label: "Price Chart",
 //     href: "#",
 //   },
 //   {
-//     label: "Hire Designers",
+//     label: "Telegram",
 //     href: "#",
 //   },
 // ];
@@ -309,7 +268,7 @@
 import {
   Box,
   Flex,
-  Text,
+  Text as ChakraText,
   IconButton,
   Button,
   Stack,
@@ -347,13 +306,17 @@ export default function Navbar() {
         align={"center"}
       >
         <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color="white"
+          <Link
+            href="https://aquapony-landing-page.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Logo
-          </Text>
+            <img
+              src="https://example.com/logo.svg" // Replace with your SVG URL
+              alt="Logo"
+              height="40px"
+            />
+          </Link>
         </Flex>
 
         <Flex
@@ -384,12 +347,14 @@ export default function Navbar() {
               fontWeight={600}
               color={"white"}
               bg={"pink.400"}
-              href={"#"}
+              href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NTM3NTIxMzEyOSwidG9rZW5fYWRkcmVzcyI6IkVRQko4R0tJZV9wQy1wRjBpcUVhRldRQ1N4MzBFczZheXF4LXNpSmZEc3JXcjBxcyJ9" // External URL for the button
+              target="_blank"
+              rel="noopener noreferrer"
               _hover={{
                 bg: "pink.300",
               }}
             >
-              Buy $AQA
+              Buy $GASAQA
             </Button>
           </Stack>
         </Flex>
@@ -423,6 +388,8 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {navItem.label}
               </Link>
@@ -460,17 +427,19 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
-          <Text
+          <ChakraText
             transition={"all .3s ease"}
             _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
             {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          </ChakraText>
+          <ChakraText fontSize={"sm"}>{subLabel}</ChakraText>
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -516,13 +485,15 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         _hover={{
           textDecoration: "none",
         }}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <Text
+        <ChakraText
           fontWeight={600}
           color={useColorModeValue("gray.600", "gray.200")}
         >
           {label}
-        </Text>
+        </ChakraText>
         {children && (
           <Icon
             as={ChevronDownIcon}
@@ -545,7 +516,13 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link
+                key={child.label}
+                py={2}
+                href={child.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {child.label}
               </Link>
             ))}
@@ -565,10 +542,10 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Price Chart",
-    href: "#",
+    href: "https://example.com/price-chart", // External URL for Price Chart
   },
   {
     label: "Telegram",
-    href: "#",
+    href: "https://t.me/aquapony_chat", // External URL for Telegram
   },
 ];
