@@ -92,7 +92,7 @@ export default function HeroSection() {
                     fontSize={"x-large"}
                     fontFamily={"Caveat"}
                     position={"absolute"}
-                    right={"-125px"}
+                    right={"-90px"}
                     top={"-15px"}
                     transform={"rotate(10deg)"}
                   >
